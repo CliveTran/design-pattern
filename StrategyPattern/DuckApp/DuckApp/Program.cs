@@ -1,17 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 var duck = new MallardDuck();
-duck.PerformFly();
-duck.PerformQuack();
-duck.SetFly(new CannotFly());
-duck.PerformFly();
+duck.PerformFly(); // "Flying..."
+duck.PerformQuack(); // "Quack quack quack!!!"
+duck.SetFly(new CannotFly()); // Can be changed => flexibility
+duck.PerformFly(); // "Can't fly bro."
 
 Console.ReadKey();
 
 public abstract class Duck
 {
-    protected IFlyBehaviour? FlyBehaviour { get; set; }
-    protected IQuackBehaviour? QuackBehaviour { get; set; }
+    protected IFlyBehaviour? FlyBehaviour { get; set; } // Program to an interface, not an implementation => Loose coupling
+    protected IQuackBehaviour? QuackBehaviour { get; set; } // Program to an interface, not an implementation => Loose coupling
 
     public void PerformFly()
     {
