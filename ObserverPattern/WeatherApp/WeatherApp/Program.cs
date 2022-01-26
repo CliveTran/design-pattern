@@ -2,6 +2,7 @@
 var current = new CurrentConditionDisplay(weatherData);
 var stat = new StatisticsDisplay(weatherData);
 var forecast = new ForecastDisplay(weatherData);
+var temp = new TemperatureOnlyDisplay(weatherData);
 
 Console.WriteLine($"Number of Observers: {weatherData.Observers.Count()}");
 
