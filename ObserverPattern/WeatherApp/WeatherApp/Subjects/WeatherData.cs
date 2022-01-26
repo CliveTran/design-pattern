@@ -37,7 +37,7 @@ public class WeatherData : ISubject
     {
         foreach(var obs in Observers)
         {
-            obs.Update(Temperature, Humidity, Pressure);
+            obs.Update();
         }
     }
 }

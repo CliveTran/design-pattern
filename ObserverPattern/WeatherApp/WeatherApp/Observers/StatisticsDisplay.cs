@@ -14,11 +14,11 @@
         Console.WriteLine($"StatisticsDisplay: Temperature = {Temperature}; Humidity = {Humidity}; Pressure = {Pressure}");
     }
 
-    public void Update(float temp, float humidity, float pressure)
+    public void Update()
     {
-        Temperature = temp;
-        Humidity = humidity;
-        Pressure = pressure;
+        Temperature = WeatherData.Temperature;
+        Humidity = WeatherData.Humidity;
+        Pressure = WeatherData.Pressure;
         Display();
     }
     public void UnsubscribeFromCurrentSubject()

@@ -12,9 +12,9 @@
         Console.WriteLine($"TemperatureOnlyDisplay: {Temperature}");
     }
 
-    public void Update(float temp, float humidity, float pressure)
+    public void Update()
     {
-        Temperature = temp;
+        Temperature = WeatherData.Temperature;
         Display();
     }
 }
