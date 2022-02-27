@@ -20,6 +20,7 @@ namespace PizzaStore.PizzaStores
 
         public override void OrderPizza(string type)
         {
+            Console.WriteLine("Message from ChicagoPizzaStore: your order is being prepared!");
             var chicagoFactory = new ChicagoPizzaIngredientFactory();
             var pizza = CreatePizza(type, chicagoFactory);
             Console.WriteLine("Your order from ChicagoPizzaStore is completed!");

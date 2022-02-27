@@ -1,35 +1,31 @@
-﻿namespace PizzaStore.PizzaIngredients.Factories
+﻿using PizzaStore.PizzaIngredients.Ingredients;
+
+namespace PizzaStore.PizzaIngredients.Factories
 {
     public class ChicagoPizzaIngredientFactory : IngredientFactory
     {
-        public override void CreateCheese()
+        public override ChicagoCheese CreateCheese()
         {
             Console.WriteLine("Chicago Cheese added!");
+            return new ChicagoCheese();
         }
 
-        public override void CreateClam()
+        public override ChicagoClam CreateClam()
         {
             Console.WriteLine("Chicago Clam added!");
+            return new ChicagoClam();
         }
 
-        public override void CreateDough()
-        {
-            Console.WriteLine("Chicago Dough added!");
-        }
-
-        public override void CreatePepperoni()
+        public override ChicagoPepperoni CreatePepperoni()
         {
             Console.WriteLine("Chicago Pepperoni added!");
+            return new ChicagoPepperoni();
         }
 
-        public override void CreateSauce()
-        {
-            Console.WriteLine("Chicago Sauce added!");
-        }
-
-        public override void CreateVeggies()
+        public override ChicagoVeggie CreateVeggies()
         {
             Console.WriteLine("Chicago Veggies added!");
+            return new ChicagoVeggie();
         }
     }
 }

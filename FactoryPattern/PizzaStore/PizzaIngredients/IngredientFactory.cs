@@ -2,11 +2,9 @@
 {
     public abstract class IngredientFactory 
     {
-        public abstract void CreateDough();
-        public abstract void CreateSauce();
-        public abstract void CreateCheese();
-        public abstract void CreateVeggies();
-        public abstract void CreatePepperoni();
-        public abstract void CreateClam();
+        public abstract Ingredient CreateCheese();
+        public abstract Ingredient CreateVeggies();
+        public abstract Ingredient CreatePepperoni();
+        public abstract Ingredient CreateClam();
     }
 }
