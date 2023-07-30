@@ -2,22 +2,22 @@
 {
     private static void Main(string[] args)
     {
-        IDatabaseConnector connector = CreateConnector("SQLServer");
-        IDatabaseConnection connection = connector.CreateConnection();
+        DatabaseProvider provider = CreateProvider("SQLServer");
+        Connection connection = provider.CreateConnection();
         connection.Connect();
         connection.Query("query");
     }
 
-    private static IDatabaseConnector CreateConnector(string dbType)
+    private static DatabaseProvider CreateProvider(string dbType)
     {
         switch (dbType)
         {
             case "SQLServer":
-                return new SqlServerConnector();
+                return new SqlServerProvider();
             case "DWH":
-                return new DataWarehouseConnector();
+                return new DataWarehouseProvider();
             default:
-                throw new Exception("Connector was not found.");
+                throw new Exception("Provider was not found.");
         }
     }
 }

@@ -1,13 +1,13 @@
-internal class DataWarehouseConnection : IDatabaseConnection
+internal class DataWarehouseConnection : Connection
 {
-    public void Connect()
+    public override void Connect()
     {
-        System.Console.WriteLine("Connected to Data Warehouse.");
+        System.Console.WriteLine("Connected to DWH Server.");
     }
 
-    public void Query(string Query)
+    public override void Query(string Query)
     {
-        System.Console.WriteLine("Executing Data Warehouse query...");
-        System.Console.WriteLine("Data Warehouse query executed successfully.");
+        System.Console.WriteLine("Executing DWH query...");
+        System.Console.WriteLine("DWH query executed successfully.");
     }
 }
